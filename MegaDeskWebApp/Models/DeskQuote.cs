@@ -52,7 +52,7 @@ namespace MegaDeskWebApp.Models
         // Material
         [EnumDataType(typeof(DeskMaterial), ErrorMessage = "Invalid desk material")]
         [Required]
-        public DeskMaterial Material;
+        public DeskMaterial Material { get; set; }
 
         // RushDays
         [Display(Name = "Rush Days")]

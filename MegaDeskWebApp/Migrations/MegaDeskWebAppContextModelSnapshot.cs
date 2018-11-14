@@ -38,6 +38,8 @@ namespace MegaDeskWebApp.Migrations
 
                     b.Property<int>("DeskWidth");
 
+                    b.Property<int>("Material");
+
                     b.Property<int>("RushDays");
 
                     b.HasKey("ID");

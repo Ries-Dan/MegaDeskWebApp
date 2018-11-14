@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MegaDeskWebApp.Models;
+using static MegaDeskWebApp.Models.DeskQuote;
+using Microsoft.EntityFrameworkCore;
 
 namespace MegaDeskWebApp.Pages.MegaDesk
 {
@@ -32,7 +34,6 @@ namespace MegaDeskWebApp.Pages.MegaDesk
             {
                 return Page();
             }
-
             _context.DeskQuote.Add(DeskQuote);
             await _context.SaveChangesAsync();
 
