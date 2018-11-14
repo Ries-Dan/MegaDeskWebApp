@@ -30,29 +30,53 @@
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.DeskDrawers" class="control-label"></label>
-                <input asp-for="DeskQuote.DeskDrawers" class="form-control" />
+                
+                <select id="Select1">
+                    <option></option>
+
+                </select>
+                <select asp-for="DeskQuote.DeskDrawers" name="Drawers">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
                 <span asp-validation-for="DeskQuote.DeskDrawers" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.Material" class="control-label"></label>
+                <select name="Choice">
+                    <option value="Photo1.jpg">Photo 1</option>
+                    <option value="Photo2.jpg">Photo 2</option>
+                    <option value="Photo3.jpg">Photo 3</option>
+                </select>
                 <input asp-for="DeskQuote.Material" class="form-control" />
                 <span asp-validation-for="DeskQuote.Material" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DeskQuote.RushDays" class="control-label"></label>
-                <input asp-for="DeskQuote.RushDays" class="form-control" />
+                <label asp-for="DeskQuote.RushDays" class="control-label"></label><br />
+                <radiogroup>
+                    <input type="radio" asp-for="DeskQuote.RushDays" value="0" @*class="form-control"*@ /> N/A <br />
+                    <input type="radio" asp-for="DeskQuote.RushDays" value="3" @*class="form-control"*@ /> 3 <br />
+                    <input type="radio" asp-for="DeskQuote.RushDays" value="5" @*class="form-control"*@ /> 5 <br />
+                    <input type="radio" asp-for="DeskQuote.RushDays" value="7" @*class="form-control"*@ /> 7<br />
+                </radiogroup>
                 <span asp-validation-for="DeskQuote.RushDays" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="DeskQuote.DeskQuoteDate" class="control-label"></label>
                 <input asp-for="DeskQuote.DeskQuoteDate" class="form-control" />
                 <span asp-validation-for="DeskQuote.DeskQuoteDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+            </div>*@
+            @*<div class="form-group">
                 <label asp-for="DeskQuote.DeskQuoteTotal" class="control-label"></label>
                 <input asp-for="DeskQuote.DeskQuoteTotal" class="form-control" />
                 <span asp-validation-for="DeskQuote.DeskQuoteTotal" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>

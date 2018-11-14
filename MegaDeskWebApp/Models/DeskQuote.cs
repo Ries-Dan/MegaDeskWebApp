@@ -140,6 +140,18 @@ namespace MegaDeskWebApp.Models
                         totalQuote += 40;
                     break;
             }
+            
+            // trying to get it only add a date if one does not exist. does not seem to be pulling the date form the database right.
+            /*
+            if (DeskQuoteDate == null)
+            {
+                DeskQuoteDate = DateTime.Now;
+            }
+            else
+            {
+                DeskQuoteDate = DeskQuoteDate;
+            }
+            */
 
             // End of method. Quote should be calculated at this point.
             DeskQuoteTotal = totalQuote;

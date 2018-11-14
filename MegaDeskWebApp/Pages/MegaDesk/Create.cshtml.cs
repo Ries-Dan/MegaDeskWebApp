@@ -33,6 +33,10 @@ namespace MegaDeskWebApp.Pages.MegaDesk
                 return Page();
             }
 
+            // call Quote Total Function from model
+            DeskQuote.DeskQuoteDate = DateTime.Now;
+            DeskQuote.CalculateQuote();
+
             _context.DeskQuote.Add(DeskQuote);
             await _context.SaveChangesAsync();
 

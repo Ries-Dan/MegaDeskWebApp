@@ -45,6 +45,11 @@ namespace MegaDeskWebApp.Pages.MegaDesk
                 return Page();
             }
 
+            // remove if we get 'date created' to work.
+            DeskQuote.DeskQuoteDate = DateTime.Now;
+            // call Quote Total Function from model
+            DeskQuote.CalculateQuote();
+
             _context.Attach(DeskQuote).State = EntityState.Modified;
 
             try
