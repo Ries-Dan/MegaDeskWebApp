@@ -49,11 +49,11 @@
                 </radiogroup>
                 <span asp-validation-for="DeskQuote.RushDays" class="text-danger"></span>
             </div>
-            @*<div class="form-group">
-                <label asp-for="DeskQuote.DeskQuoteDate" class="control-label"></label>
-                <input asp-for="DeskQuote.DeskQuoteDate" class="form-control" />
-                <span asp-validation-for="DeskQuote.DeskQuoteDate" class="text-danger"></span>
-            </div>*@
+            <div class="form-group">
+                @*<label asp-for="DeskQuote.DeskQuoteDate" class="control-label"></label>*@
+                <input type="hidden" asp-for="DeskQuote.DeskQuoteDate" class="form-control" />
+                @*<span asp-validation-for="DeskQuote.DeskQuoteDate" class="text-danger"></span>*@
+            </div>
             @*<div class="form-group">
                 <label asp-for="DeskQuote.DeskQuoteTotal" class="control-label"></label>
                 <input asp-for="DeskQuote.DeskQuoteTotal" class="form-control" />

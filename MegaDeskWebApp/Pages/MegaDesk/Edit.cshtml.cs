@@ -45,8 +45,10 @@ namespace MegaDeskWebApp.Pages.MegaDesk
                 return Page();
             }
 
+
+            //Need to figure out what we're missing to get the already set DateTime to pass.
             // remove if we get 'date created' to work.
-            DeskQuote.DeskQuoteDate = DateTime.Now;
+            //DeskQuote.DeskQuoteDate = DateTime.Now;
             // call Quote Total Function from model
             DeskQuote.CalculateQuote();
 
