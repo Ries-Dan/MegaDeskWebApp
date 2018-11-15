@@ -32,11 +32,28 @@
             <div class="form-group">
                 <label asp-for="DeskQuote.DeskDrawers" class="control-label"></label>
                 <input asp-for="DeskQuote.DeskDrawers" class="form-control" />
+                @*<select asp-for="DeskQuote.DeskDrawers" name="Drawers">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>*@
                 <span asp-validation-for="DeskQuote.DeskDrawers" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.Material" class="control-label"></label>
                 <input asp-for="DeskQuote.Material" class="form-control" />
+                @*<select asp-for=" DeskQuote.Material">
+                    <option value="oak">Oak</option>
+                    <option value="laminate">Laminate</option>
+                    <option value="pine">Pine</option>
+                    <option value="rosewood">Rosewood</option>
+                    <option value="veneer">Veneer</option>
+                </select>*@
                 <span asp-validation-for="DeskQuote.Material" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -67,7 +84,7 @@
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="../Index">Back to List</a>
 </div>
 
 @section Scripts {

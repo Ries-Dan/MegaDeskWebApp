@@ -70,7 +70,7 @@ namespace MegaDeskWebApp.Pages.MegaDesk
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../Index");
         }
 
         private bool DeskQuoteExists(int id)

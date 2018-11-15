@@ -11,11 +11,11 @@ namespace MegaDeskWebApp.Models
         // eNum for DeskMaterial
         public enum DeskMaterial
         {
-            oak      = 200,
-            laminate = 100,
-            pine     = 50,
-            rosewood = 300,
-            veneer   = 125
+            Oak      = 200,
+            Laminate = 100,
+            Pine     = 50,
+            Rosewood = 300,
+            Veneer   = 125
         }
 
         // MEMBER VARIABLES
@@ -141,6 +141,7 @@ namespace MegaDeskWebApp.Models
                     break;
             }
             
+            //fixed
             // trying to get it only add a date if one does not exist. does not seem to be pulling the date form the database right.
             /*
             if (DeskQuoteDate == null)

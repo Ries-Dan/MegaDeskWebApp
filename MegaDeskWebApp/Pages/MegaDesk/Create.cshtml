@@ -30,12 +30,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.DeskDrawers" class="control-label"></label>
-                
-                <select id="Select1">
-                    <option></option>
-
-                </select>
-                <select asp-for="DeskQuote.DeskDrawers" name="Drawers">
+                <input asp-for="DeskQuote.DeskDrawers" class="form-control" />
+                @*Dropdown value not passing fro some reason*@
+                @*<select asp-for="DeskQuote.DeskDrawers" name="Drawers">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -44,16 +41,22 @@
                     <option value="5">5</option>
                     <option value="6">6</option>
                     <option value="7">7</option>
-                </select>
+                </select>*@
                 <span asp-validation-for="DeskQuote.DeskDrawers" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.Material" class="control-label"></label>
-                <select name="Choice">
-                    <option value="Photo1.jpg">Photo 1</option>
-                    <option value="Photo2.jpg">Photo 2</option>
-                    <option value="Photo3.jpg">Photo 3</option>
-                </select>
+                <input asp-for="DeskQuote.Material" class="form-control" />
+                @*Made this a drop down and it deoesn't work yet.
+                    for some reason, materials is not getting set or sent to the database. the database is not even making a column for material for that matter
+                    getttnig it to pull from the enum to populate automagically properly might be a teach question though.*@
+                @*<select asp-for=" DeskQuote.Material">
+                    <option value="oak">Oak</option>
+                    <option value="laminate">Laminate</option>
+                    <option value="pine">Pine</option>
+                    <option value="rosewood">Rosewood</option>
+                    <option value="veneer">Veneer</option>
+                </select>*@
                 <input asp-for="DeskQuote.Material" class="form-control" />
                 <span asp-validation-for="DeskQuote.Material" class="text-danger"></span>
             </div>
@@ -85,7 +88,7 @@
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="../Index">Back to List</a>
 </div>
 
 @section Scripts {

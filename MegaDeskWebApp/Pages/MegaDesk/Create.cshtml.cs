@@ -40,7 +40,7 @@ namespace MegaDeskWebApp.Pages.MegaDesk
             _context.DeskQuote.Add(DeskQuote);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("../Index");
         }
     }
 }
