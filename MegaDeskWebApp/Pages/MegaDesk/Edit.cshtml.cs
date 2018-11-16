@@ -45,13 +45,6 @@ namespace MegaDeskWebApp.Pages.MegaDesk
                 return Page();
             }
 
-
-            //Need to figure out what we're missing to get the already set DateTime to pass.
-            // remove if we get 'date created' to work.
-            //DeskQuote.DeskQuoteDate = DateTime.Now;
-            // call Quote Total Function from model
-            DeskQuote.CalculateQuote();
-
             _context.Attach(DeskQuote).State = EntityState.Modified;
 
             try
@@ -70,7 +63,7 @@ namespace MegaDeskWebApp.Pages.MegaDesk
                 }
             }
 
-            return RedirectToPage("../Index");
+            return RedirectToPage("./Index");
         }
 
         private bool DeskQuoteExists(int id)
