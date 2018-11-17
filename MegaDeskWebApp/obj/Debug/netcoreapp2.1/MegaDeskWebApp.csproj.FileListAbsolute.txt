@@ -71,7 +71,6 @@ C:\Users\taylo\OneDrive\Documents\GitHub\MegaDeskWebApp\MegaDeskWebApp\obj\Debug
 C:\Users\taylo\OneDrive\Documents\GitHub\MegaDeskWebApp\MegaDeskWebApp\obj\Debug\netcoreapp2.1\Razor\Pages\MegaDesk\Delete.g.cshtml.cs
 C:\Users\taylo\OneDrive\Documents\GitHub\MegaDeskWebApp\MegaDeskWebApp\obj\Debug\netcoreapp2.1\Razor\Pages\MegaDesk\Details.g.cshtml.cs
 C:\Users\taylo\OneDrive\Documents\GitHub\MegaDeskWebApp\MegaDeskWebApp\obj\Debug\netcoreapp2.1\Razor\Pages\MegaDesk\Edit.g.cshtml.cs
-C:\Users\taylo\OneDrive\Documents\GitHub\MegaDeskWebApp\MegaDeskWebApp\obj\Debug\netcoreapp2.1\Razor\Pages\MegaDesk\Index.g.cshtml.cs
 C:\Users\Bryce\Documents\School Stuff\6th Year\2nd Semester\CIT 365\MegaDeskWebApp\MegaDeskWebApp\bin\Debug\netcoreapp2.1\MegaDeskWebApp.deps.json
 C:\Users\Bryce\Documents\School Stuff\6th Year\2nd Semester\CIT 365\MegaDeskWebApp\MegaDeskWebApp\bin\Debug\netcoreapp2.1\MegaDeskWebApp.runtimeconfig.json
 C:\Users\Bryce\Documents\School Stuff\6th Year\2nd Semester\CIT 365\MegaDeskWebApp\MegaDeskWebApp\bin\Debug\netcoreapp2.1\MegaDeskWebApp.runtimeconfig.dev.json
@@ -108,3 +107,4 @@ C:\Users\Bryce\Documents\School Stuff\6th Year\2nd Semester\CIT 365\MegaDeskWebA
 C:\Users\Bryce\Documents\School Stuff\6th Year\2nd Semester\CIT 365\MegaDeskWebApp\MegaDeskWebApp\obj\Debug\netcoreapp2.1\MegaDeskWebApp.pdb
 C:\Users\Bryce\Documents\School Stuff\6th Year\2nd Semester\CIT 365\MegaDeskWebApp\MegaDeskWebApp\obj\Debug\netcoreapp2.1\MegaDeskWebApp.csproj.CopyComplete
 C:\Users\Bryce\Documents\School Stuff\6th Year\2nd Semester\CIT 365\MegaDeskWebApp\MegaDeskWebApp\obj\Debug\netcoreapp2.1\Razor\Pages\Indexold.g.cshtml.cs
+C:\Users\taylo\OneDrive\Documents\GitHub\MegaDeskWebApp\MegaDeskWebApp\obj\Debug\netcoreapp2.1\Razor\Pages\Indexold.g.cshtml.cs
