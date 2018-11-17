@@ -24,7 +24,9 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].CustName)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort">
+                    @Html.DisplayNameFor(model => model.DeskQuote[0].CustName)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].DeskWidth)
@@ -42,7 +44,9 @@
                 @Html.DisplayNameFor(model => model.DeskQuote[0].RushDays)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].DeskQuoteDate)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">
+                    @Html.DisplayNameFor(model => model.DeskQuote[0].DeskQuoteDate)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].DeskQuoteTotal)

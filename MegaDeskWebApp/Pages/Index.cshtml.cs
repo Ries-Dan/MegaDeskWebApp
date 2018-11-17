@@ -20,13 +20,18 @@ namespace MegaDeskWebApp.Pages.MegaDesk
             _context = context;
         }
 
+        public string NameSort { get; set; }
+        public string DateSort { get; set; }
+        public string CurrentFilter { get; set; }
+        public string CurrentSort { get; set; }
+
         public IList<DeskQuote> DeskQuote { get;set; }
         public string SearchString { get; set; }
         public SelectList Quotes { get; set; }
         public string QuoteName { get; set; }
 
 
-        public async Task OnGetAsync(string quoteName, string searchString)
+        public async Task OnGetAsync(string quoteName, string searchString, string sortOrder)
         {
             // Use LINQ to get list of genres.
             IQueryable<DeskMaterial>recordQuery = from MegaDesk in _context.DeskQuote
@@ -45,8 +50,34 @@ namespace MegaDeskWebApp.Pages.MegaDesk
             {
                 records = records.Where(x => x.Material.ToString() == quoteName);
             }
+
+
+            NameSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            DateSort = sortOrder == "Date" ? "date_desc" : "Date";
+
+            IQueryable<DeskQuote> quoteIQ = from s in _context.DeskQuote
+                                            select s;
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    quoteIQ = quoteIQ.OrderByDescending(s => s.CustName);
+                    break;
+                case "Date":
+                    quoteIQ = quoteIQ.OrderBy(s => s.DeskQuoteDate);
+                    break;
+                case "date_desc":
+                    quoteIQ = quoteIQ.OrderByDescending(s => s.DeskQuoteDate);
+                    break;
+                default:
+                    quoteIQ = quoteIQ.OrderBy(s => s.CustName);
+                    break;
+            }
+
+            
+
             Quotes = new SelectList(await recordQuery.Distinct().ToListAsync());
             DeskQuote = await records.ToListAsync();
+            DeskQuote = await quoteIQ.AsNoTracking().ToListAsync();
             SearchString = searchString;
         }
     }
