@@ -7,7 +7,7 @@
 
 <h2>Create</h2>
 
-<h4>DeskQuote</h4>
+<h4>Desk Quote</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,23 +15,24 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="DeskQuote.CustName" class="control-label"></label>
-                <input asp-for="DeskQuote.CustName" class="form-control" />
+                <input asp-for="DeskQuote.CustName" class="form-control" placeholder="Name" />
                 <span asp-validation-for="DeskQuote.CustName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.DeskWidth" class="control-label"></label>
-                <input asp-for="DeskQuote.DeskWidth" class="form-control" />
+                <input asp-for="DeskQuote.DeskWidth" class="form-control" placeholder="Width"/>
                 <span asp-validation-for="DeskQuote.DeskWidth" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.DeskDepth" class="control-label"></label>
-                <input asp-for="DeskQuote.DeskDepth" class="form-control" />
+                <input asp-for="DeskQuote.DeskDepth" class="form-control" placeholder="Depth"/>
                 <span asp-validation-for="DeskQuote.DeskDepth" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.DeskDrawers" class="control-label"></label>
                 @*<input asp-for="DeskQuote.DeskDrawers" class="form-control" />*@
                 <select asp-for="DeskQuote.DeskDrawers" class="form-control">
+                    <option value="" disabled selected>Drawers</option>
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -52,6 +53,7 @@
                 for some reason, materials is not getting set or sent to the database. the database is not even making a column for material for that matter
                 getttnig it to pull from the enum to populate automagically properly might be a teach question though.*@
                 <select asp-for=" DeskQuote.Material" class="form-control">
+                    <option value="" disabled selected>Material</option>
                     <option value="oak">Oak</option>
                     <option value="laminate">Laminate</option>
                     <option value="pine">Pine</option>

@@ -1,10 +1,43 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
 for details on configuring this project to bundle and minify static web assets. */
 body {
+    background-color: #303030;
+    color: #fdfdfd;
+    font-weight: bold;
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
+input,
+button,
+select,
+textarea {
+    color: black;
+  font-family: inherit;
+  font-size: inherit;
+    font-weight: 200;
+  line-height: inherit;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  color: #fdfdfd;
+}
+.table > caption + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > th,
+.table > thead:first-child > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+  font-weight: 900;
+}
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
@@ -34,4 +67,95 @@ body {
     .carousel-caption {
         display: none;
     }
+}
+
+/*.slide  {
+    height: 50px;
+    position: fixed !important;
+    top: 0;
+    padding-bottom: 32px;
+    z-index: 1;
+
+}*/
+.navbar {
+
+    /*position: relative*/
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    transition: height;
+    display: flex;
+    display: -webkit-flex;
+    top: -40px;
+    transition: background-color 1s,  top 0.25s;
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+.navbar:hover {
+    background-color: whitesmoke;
+    top: 0;
+    opacity: 1;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #626262;
+}
+.navbar-inverse .navbar-brand:hover {
+	color: #000;
+}
+.navbar-inverse .navbar-nav > li > a {
+	color: #626262;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+	color: #000;
+	background-color: transparent;
+}
+.navbar-inverse {
+	background-color: deepskyblue;
+	border-color: #080808;
+}
+.navbar-fixed-top, .navbar-fixed-bottom {
+	position: fixed;
+	right: 15em;
+	left: 15em;
+	z-index: 1;
+}
+a {
+	color: deepskyblue;
+	text-decoration: none;
+}
+a:hover, a:focus {
+	color: skyblue;
+	text-decoration: underline;
+}
+.form-control {
+	color: #333;
+}
+.form-control-short {
+	/* display: block; */
+	/* width: 100%; */
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#search {
+    text-align: right;
+}
+footer {
+	display: block;
+    text-align: right;
+}
+h1, h2,h3,h4,h5,h6 {
+    font-family: 'Allerta Stencil', sans-serif;
 }

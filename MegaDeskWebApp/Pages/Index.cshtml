@@ -7,14 +7,16 @@
 
 <h2>Index</h2>
 <form>
-    <p>
-        <select asp-for="QuoteName" asp-items="Model.Quotes">
+    <p id="search">
+        <select asp-for="QuoteName" asp-items="Model.Quotes" class="form-control-short" >
             <option value="">All</option>
         </select>
 
-        <input type="text" name="SearchString">
-        <input type="submit" value="Search" />
-        <a href="index">Clear Search</a>
+        <input type="text" name="SearchString" class="form-control-short" placeholder="Name" >
+
+        <input type="submit" value="Search" class="btn btn-default" />
+        <br />
+        <a href="index" style="position:relative">Clear Search</a>
     </p>
 </form>
 <p>
@@ -27,7 +29,6 @@
                 <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort">
                     @Html.DisplayNameFor(model => model.DeskQuote[0].CustName)
                 </a>
-                @*@Html.DisplayNameFor(model => model.DeskQuote[0].CustName)*@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].DeskWidth)
@@ -48,7 +49,6 @@
                 <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">
                     @Html.DisplayNameFor(model => model.DeskQuote[0].DeskQuoteDate)
                 </a>
-                @*@Html.DisplayNameFor(model => model.DeskQuote[0].DeskQuoteDate)*@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].DeskQuoteTotal)
