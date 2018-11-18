@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Compile Remove="Pages\Indextest.cshtml.cs" />
-    <Compile Remove="PaginatedList.cs" />
   </ItemGroup>
 
   <ItemGroup>
